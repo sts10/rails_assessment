@@ -13,11 +13,28 @@ Questions to be answered in the assesment.txt file.
 
 How does rails communicate with the database?  Please be thorough in discussing all the config files and pieces of rails necessary to communicate with the database.
 
+Rails' database.yml file establishes the connection to the database, using SQLite3 in our case. Migrations are written and stored in db/migrate. 
+
+
 What is a resource?
+A resource is a collection of a model, migration, controller, and views that represent a "thing" that your program has. "Post" or "comment" are good examples of these. If there's some thing in your app that users will expect to be able to create, read, update and destroy (CRUD!), it's probably a resource.
 
 What are the standard RESTful routes for a resource?
 
+Method   URI       Description
+
+GET      /posts    Shows all posts (index)
+GET      /post/:id Show user an individual post
+GET      /new      Presents or shows user with new post form
+POST     /posts    Post route to create new posts. 
+GET      /posts/:id/edit  Presents user with the form to edit posts
+PATCH    /posts/:id  Update route to edit posts
+DELETE   /posts/:id  Destroy route to delete a post
+
+
 What is CRUD?
+
+
 
 What is REST?
 
